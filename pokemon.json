@@ -1,0 +1,193 @@
+{
+    "root": {
+      "Abomasnow": {
+        "Type": "Grass, Ice",
+        "Species": "Frost Tree Pokémon",
+        "Height": "2.2 m (7′03″)",
+        "Weight": "135.5 kg (298.7 lbs)",
+        "Abilities": "1. Snow Warning, Soundproof (hidden ability)",
+        "EV Yield": "1 Attack, 1 Sp. Atk",
+        "Catch Rate": "60 (7.8% with PokéBall, full HP)",
+        "Base Friendship": "50 (normal)",
+        "Base Exp": "173",
+        "Growth Rate": "Slow",
+        "Egg Groups": "Grass, Monster",
+        "Gender": "50% male, 50% female",
+        "Egg Cycles": "20 (4,884–5,140 steps)",
+        "Stats": {
+          "HP": {
+            "Base": 90,
+            "Min": 290,
+            "Max": 384
+          },
+          "Attack": {
+            "Base": 92,
+            "Min": 170,
+            "Max": 311
+          },
+          "Defense": {
+            "Base": 75,
+            "Min": 139,
+            "Max": 273
+          },
+          "Special Attack": {
+            "Base": 92,
+            "Min": 170,
+            "Max": 311
+          },
+          "Special Defense": {
+            "Base": 85,
+            "Min": 157,
+            "Max": 295
+          },
+          "Speed": {
+            "Base": 60,
+            "Min": 112,
+            "Max": 240
+          }
+        }
+      },
+      "Mega Abomasnow": {
+        "Type": "Grass, Ice",
+        "Species": "Frost Tree Pokémon",
+        "Height": "2.7 m (8′10″)",
+        "Weight": "185.0 kg (407.9 lbs)",
+        "Abilities": "1. Snow Warning",
+        "EV Yield": "1 Attack, 1 Sp. Atk",
+        "Catch Rate": "60 (7.8% with PokéBall, full HP)",
+        "Base Friendship": "50 (normal)",
+        "Base Exp": "208",
+        "Growth Rate": "Slow",
+        "Egg Groups": "Grass, Monster",
+        "Gender": "50% male, 50% female",
+        "Egg Cycles": "20 (4,884–5,140 steps)",
+        "Stats": {
+          "HP": {
+            "Base": 90,
+            "Min": 290,
+            "Max": 384
+          },
+          "Attack": {
+            "Base": 132,
+            "Min": 242,
+            "Max": 399
+          },
+          "Defense": {
+            "Base": 105,
+            "Min": 193,
+            "Max": 339
+          },
+          "Special Attack": {
+            "Base": 132,
+            "Min": 242,
+            "Max": 399
+          },
+          "Special Defense": {
+            "Base": 105,
+            "Min": 193,
+            "Max": 339
+          },
+          "Speed": {
+            "Base": 30,
+            "Min": 58,
+            "Max": 174
+          }
+        }
+      },
+      "Abra": {
+        "Type": "Psychic",
+        "Species": "Psi Pokémon",
+        "Height": "0.9 m (2′11″)",
+        "Weight": "19.5 kg (43.0 lbs)",
+        "Abilities": "1. Synchronize, 2. Inner Focus, Magic Guard (hidden ability)",
+        "EV Yield": "1 Sp. Atk",
+        "Catch Rate": "200 (26.1% with PokéBall, full HP)",
+        "Base Friendship": "50 (normal)",
+        "Base Exp": "62",
+        "Growth Rate": "Medium Slow",
+        "Egg Groups": "Human-Like",
+        "Gender": "75% male, 25% female",
+        "Egg Cycles": "20 (4,884–5,140 steps)",
+        "Stats": {
+          "HP": {
+            "Base": 25,
+            "Min": 160,
+            "Max": 254
+          },
+          "Attack": {
+            "Base": 20,
+            "Min": 40,
+            "Max": 152
+          },
+          "Defense": {
+            "Base": 15,
+            "Min": 31,
+            "Max": 141
+          },
+          "Special Attack": {
+            "Base": 105,
+            "Min": 193,
+            "Max": 339
+          },
+          "Special Defense": {
+            "Base": 55,
+            "Min": 103,
+            "Max": 229
+          },
+          "Speed": {
+            "Base": 90,
+            "Min": 166,
+            "Max": 306
+          }
+        }
+      },
+      "Absol": {
+        "Type": "Dark",
+        "Species": "Disaster Pokémon",
+        "Height": "1.2 m (3′11″)",
+        "Weight": "47.0 kg (103.6 lbs)",
+        "Abilities": "1. Pressure, 2. Super Luck, Justified (hidden ability)",
+        "EV Yield": "2 Attack",
+        "Catch Rate": "30 (3.9% with PokéBall, full HP)",
+        "Base Friendship": "35 (lower than normal)",
+        "Base Exp": "163",
+        "Growth Rate": "Medium Slow",
+        "Egg Groups": "Field",
+        "Gender": "50% male, 50% female",
+        "Egg Cycles": "25 (6,169–6,425 steps)",
+        "Stats": {
+          "HP": {
+            "Base": 65,
+            "Min": 240,
+            "Max": 334
+          },
+          "Attack": {
+            "Base": 130,
+            "Min": 238,
+            "Max": 394
+          },
+          "Defense": {
+            "Base": 60,
+            "Min": 112,
+            "Max": 240
+          },
+          "Special Attack": {
+            "Base": 75,
+            "Min": 139,
+            "Max": 273
+          },
+          "Special Defense": {
+            "Base": 60,
+            "Min": 112,
+            "Max": 240
+          },
+          "Speed": {
+            "Base": 75,
+            "Min": 139,
+            "Max": 273
+          }
+        }
+      }
+    }
+  }
+  
