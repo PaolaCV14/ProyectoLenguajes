@@ -6,51 +6,51 @@ def p_json(p):
     p[0] = p[1] + p[2] + p[3]
 
 def p_contenido(p):
-    'contenido: ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA'
+    'contenido : ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA'
     p[0] = p[1] + p[2] + p[3]
 
 def p_elementos_varios(p):
-    'elementos: LLAVE_ABRE estructura LLAVE_CIERRA COMA'
+    'elementos : LLAVE_ABRE estructura LLAVE_CIERRA COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_elemento_final(p):
-    'elementos: LLAVE_ABRE estructura LLAVE_CIERRA'
+    'elementos : LLAVE_ABRE estructura LLAVE_CIERRA'
     p[0] = p[1] + p[2] + p[3]
 
 def p_estructura(p):
-    'estructura: competition_id season_id country competition_name gender youth international season_name match'
+    'estructura : competition_id season_id country competition_name gender youth international season_name match'
     p[0] = p[1] + p[2] + p[3] + p[4] + p[5] + p[6] + p[7] + p[8] + p[9]
 
 def p_competition_id(p):
-    'competition_id: COMPETITION_ID DOSPUNTOS NUMBER COMA'
+    'competition_id : COMPETITION_ID DOSPUNTOS NUMBER COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_season_id(p):
-    'season_id: SEASON_ID DOSPUNTOS NUMBER COMA'
+    'season_id : SEASON_ID DOSPUNTOS NUMBER COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_country(p):
-    'country: COUNTRY DOSPUNTOS STRING COMA'
+    'country : COUNTRY DOSPUNTOS STRING COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_competition_name(p):
-    'competition_name: COMPETITION_NAME DOSPUNTOS STRING COMA'
+    'competition_name : COMPETITION_NAME DOSPUNTOS STRING COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_gender(p):
-     'gender: GENDER DOSPUNTOS STRING COMA'
+     'gender : GENDER DOSPUNTOS STRING COMA'
      p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_youth(p):
-     'youth: YOUTH DOSPUNTOS BOOLEAN COMA'
+     'youth : YOUTH DOSPUNTOS BOOLEAN COMA'
      p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_international(p):
-     'international: INTERNATIONAL DOSPUNTOS BOOLEAN COMA'
+     'international : INTERNATIONAL DOSPUNTOS BOOLEAN COMA'
      p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_season_name(p):
-    'season_name: SEASON_NAME DOSPUNTOS STRING COMA'
+    'season_name : SEASON_NAME DOSPUNTOS STRING COMA'
     p[0] = p[1] + p[2] + p[3] + p[4]
 
 def p_match(p):
