@@ -1,1 +1,738 @@
 Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> json
+Rule 1     json -> LLAVE_ABRE contenido LLAVE_CIERRA
+Rule 2     contenido -> ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA
+Rule 3     elementos -> LLAVE_ABRE estructura LLAVE_CIERRA COMA
+Rule 4     elementos -> LLAVE_ABRE estructura LLAVE_CIERRA
+Rule 5     estructura -> competition_id season_id country competition_name gender youth international season_name match
+Rule 6     competition_id -> COMPETITION_ID DOSPUNTOS NUMBER COMA
+Rule 7     season_id -> SEASON_ID DOSPUNTOS NUMBER COMA
+Rule 8     country -> COUNTRY DOSPUNTOS STRING COMA
+Rule 9     competition_name -> COMPETITION_NAME DOSPUNTOS STRING COMA
+Rule 10    gender -> GENDER DOSPUNTOS STRING COMA
+Rule 11    youth -> YOUTH DOSPUNTOS BOOLEAN COMA
+Rule 12    international -> INTERNATIONAL DOSPUNTOS BOOLEAN COMA
+Rule 13    season_name -> SEASON_NAME DOSPUNTOS STRING COMA
+Rule 14    match -> MATCH DOSPUNTOS LLAVE_ABRE estructura_match LLAVE_CIERRA
+Rule 15    estructura_match -> updated updated360 available360 available
+Rule 16    updated -> UPDATED DOSPUNTOS TIMESTAMP COMA
+Rule 17    updated -> UPDATED DOSPUNTOS NULL COMA
+Rule 18    updated360 -> UPDATED_360 DOSPUNTOS TIMESTAMP COMA
+Rule 19    updated360 -> UPDATED_360 DOSPUNTOS NULL COMA
+Rule 20    available360 -> AVAILABLE_360 DOSPUNTOS TIMESTAMP COMA
+Rule 21    available360 -> AVAILABLE_360 DOSPUNTOS NULL COMA
+Rule 22    available -> AVAILABLE DOSPUNTOS TIMESTAMP
+Rule 23    available -> AVAILABLE DOSPUNTOS NULL
+
+Terminals, with rules where they appear
+
+AVAILABLE            : 22 23
+AVAILABLE_360        : 20 21
+BOOLEAN              : 11 12
+COMA                 : 3 6 7 8 9 10 11 12 13 16 17 18 19 20 21
+COMPETITION_ID       : 6
+COMPETITION_NAME     : 9
+COR_ABRE             : 2
+COR_CIERRA           : 2
+COUNTRY              : 8
+DOSPUNTOS            : 2 6 7 8 9 10 11 12 13 14 16 17 18 19 20 21 22 23
+GENDER               : 10
+INTERNATIONAL        : 12
+LLAVE_ABRE           : 1 3 4 14
+LLAVE_CIERRA         : 1 3 4 14
+MATCH                : 14
+NULL                 : 17 19 21 23
+NUMBER               : 6 7
+ROOT                 : 2
+SEASON_ID            : 7
+SEASON_NAME          : 13
+STRING               : 8 9 10 13
+TIMESTAMP            : 16 18 20 22
+UPDATED              : 16 17
+UPDATED_360          : 18 19
+YOUTH                : 11
+error                : 
+
+Nonterminals, with rules where they appear
+
+available            : 15
+available360         : 15
+competition_id       : 5
+competition_name     : 5
+contenido            : 1
+country              : 5
+elementos            : 2
+estructura           : 3 4
+estructura_match     : 14
+gender               : 5
+international        : 5
+json                 : 0
+match                : 5
+season_id            : 5
+season_name          : 5
+updated              : 15
+updated360           : 15
+youth                : 5
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . json
+    (1) json -> . LLAVE_ABRE contenido LLAVE_CIERRA
+
+    LLAVE_ABRE      shift and go to state 2
+
+    json                           shift and go to state 1
+
+state 1
+
+    (0) S' -> json .
+
+
+
+state 2
+
+    (1) json -> LLAVE_ABRE . contenido LLAVE_CIERRA
+    (2) contenido -> . ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA
+
+    ROOT            shift and go to state 4
+
+    contenido                      shift and go to state 3
+
+state 3
+
+    (1) json -> LLAVE_ABRE contenido . LLAVE_CIERRA
+
+    LLAVE_CIERRA    shift and go to state 5
+
+
+state 4
+
+    (2) contenido -> ROOT . DOSPUNTOS COR_ABRE elementos COR_CIERRA
+
+    DOSPUNTOS       shift and go to state 6
+
+
+state 5
+
+    (1) json -> LLAVE_ABRE contenido LLAVE_CIERRA .
+
+    $end            reduce using rule 1 (json -> LLAVE_ABRE contenido LLAVE_CIERRA .)
+
+
+state 6
+
+    (2) contenido -> ROOT DOSPUNTOS . COR_ABRE elementos COR_CIERRA
+
+    COR_ABRE        shift and go to state 7
+
+
+state 7
+
+    (2) contenido -> ROOT DOSPUNTOS COR_ABRE . elementos COR_CIERRA
+    (3) elementos -> . LLAVE_ABRE estructura LLAVE_CIERRA COMA
+    (4) elementos -> . LLAVE_ABRE estructura LLAVE_CIERRA
+
+    LLAVE_ABRE      shift and go to state 9
+
+    elementos                      shift and go to state 8
+
+state 8
+
+    (2) contenido -> ROOT DOSPUNTOS COR_ABRE elementos . COR_CIERRA
+
+    COR_CIERRA      shift and go to state 10
+
+
+state 9
+
+    (3) elementos -> LLAVE_ABRE . estructura LLAVE_CIERRA COMA
+    (4) elementos -> LLAVE_ABRE . estructura LLAVE_CIERRA
+    (5) estructura -> . competition_id season_id country competition_name gender youth international season_name match
+    (6) competition_id -> . COMPETITION_ID DOSPUNTOS NUMBER COMA
+
+    COMPETITION_ID  shift and go to state 13
+
+    estructura                     shift and go to state 11
+    competition_id                 shift and go to state 12
+
+state 10
+
+    (2) contenido -> ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA .
+
+    LLAVE_CIERRA    reduce using rule 2 (contenido -> ROOT DOSPUNTOS COR_ABRE elementos COR_CIERRA .)
+
+
+state 11
+
+    (3) elementos -> LLAVE_ABRE estructura . LLAVE_CIERRA COMA
+    (4) elementos -> LLAVE_ABRE estructura . LLAVE_CIERRA
+
+    LLAVE_CIERRA    shift and go to state 14
+
+
+state 12
+
+    (5) estructura -> competition_id . season_id country competition_name gender youth international season_name match
+    (7) season_id -> . SEASON_ID DOSPUNTOS NUMBER COMA
+
+    SEASON_ID       shift and go to state 16
+
+    season_id                      shift and go to state 15
+
+state 13
+
+    (6) competition_id -> COMPETITION_ID . DOSPUNTOS NUMBER COMA
+
+    DOSPUNTOS       shift and go to state 17
+
+
+state 14
+
+    (3) elementos -> LLAVE_ABRE estructura LLAVE_CIERRA . COMA
+    (4) elementos -> LLAVE_ABRE estructura LLAVE_CIERRA .
+
+    COMA            shift and go to state 18
+    COR_CIERRA      reduce using rule 4 (elementos -> LLAVE_ABRE estructura LLAVE_CIERRA .)
+
+
+state 15
+
+    (5) estructura -> competition_id season_id . country competition_name gender youth international season_name match
+    (8) country -> . COUNTRY DOSPUNTOS STRING COMA
+
+    COUNTRY         shift and go to state 20
+
+    country                        shift and go to state 19
+
+state 16
+
+    (7) season_id -> SEASON_ID . DOSPUNTOS NUMBER COMA
+
+    DOSPUNTOS       shift and go to state 21
+
+
+state 17
+
+    (6) competition_id -> COMPETITION_ID DOSPUNTOS . NUMBER COMA
+
+    NUMBER          shift and go to state 22
+
+
+state 18
+
+    (3) elementos -> LLAVE_ABRE estructura LLAVE_CIERRA COMA .
+
+    COR_CIERRA      reduce using rule 3 (elementos -> LLAVE_ABRE estructura LLAVE_CIERRA COMA .)
+
+
+state 19
+
+    (5) estructura -> competition_id season_id country . competition_name gender youth international season_name match
+    (9) competition_name -> . COMPETITION_NAME DOSPUNTOS STRING COMA
+
+    COMPETITION_NAME shift and go to state 24
+
+    competition_name               shift and go to state 23
+
+state 20
+
+    (8) country -> COUNTRY . DOSPUNTOS STRING COMA
+
+    DOSPUNTOS       shift and go to state 25
+
+
+state 21
+
+    (7) season_id -> SEASON_ID DOSPUNTOS . NUMBER COMA
+
+    NUMBER          shift and go to state 26
+
+
+state 22
+
+    (6) competition_id -> COMPETITION_ID DOSPUNTOS NUMBER . COMA
+
+    COMA            shift and go to state 27
+
+
+state 23
+
+    (5) estructura -> competition_id season_id country competition_name . gender youth international season_name match
+    (10) gender -> . GENDER DOSPUNTOS STRING COMA
+
+    GENDER          shift and go to state 29
+
+    gender                         shift and go to state 28
+
+state 24
+
+    (9) competition_name -> COMPETITION_NAME . DOSPUNTOS STRING COMA
+
+    DOSPUNTOS       shift and go to state 30
+
+
+state 25
+
+    (8) country -> COUNTRY DOSPUNTOS . STRING COMA
+
+    STRING          shift and go to state 31
+
+
+state 26
+
+    (7) season_id -> SEASON_ID DOSPUNTOS NUMBER . COMA
+
+    COMA            shift and go to state 32
+
+
+state 27
+
+    (6) competition_id -> COMPETITION_ID DOSPUNTOS NUMBER COMA .
+
+    SEASON_ID       reduce using rule 6 (competition_id -> COMPETITION_ID DOSPUNTOS NUMBER COMA .)
+
+
+state 28
+
+    (5) estructura -> competition_id season_id country competition_name gender . youth international season_name match
+    (11) youth -> . YOUTH DOSPUNTOS BOOLEAN COMA
+
+    YOUTH           shift and go to state 34
+
+    youth                          shift and go to state 33
+
+state 29
+
+    (10) gender -> GENDER . DOSPUNTOS STRING COMA
+
+    DOSPUNTOS       shift and go to state 35
+
+
+state 30
+
+    (9) competition_name -> COMPETITION_NAME DOSPUNTOS . STRING COMA
+
+    STRING          shift and go to state 36
+
+
+state 31
+
+    (8) country -> COUNTRY DOSPUNTOS STRING . COMA
+
+    COMA            shift and go to state 37
+
+
+state 32
+
+    (7) season_id -> SEASON_ID DOSPUNTOS NUMBER COMA .
+
+    COUNTRY         reduce using rule 7 (season_id -> SEASON_ID DOSPUNTOS NUMBER COMA .)
+
+
+state 33
+
+    (5) estructura -> competition_id season_id country competition_name gender youth . international season_name match
+    (12) international -> . INTERNATIONAL DOSPUNTOS BOOLEAN COMA
+
+    INTERNATIONAL   shift and go to state 39
+
+    international                  shift and go to state 38
+
+state 34
+
+    (11) youth -> YOUTH . DOSPUNTOS BOOLEAN COMA
+
+    DOSPUNTOS       shift and go to state 40
+
+
+state 35
+
+    (10) gender -> GENDER DOSPUNTOS . STRING COMA
+
+    STRING          shift and go to state 41
+
+
+state 36
+
+    (9) competition_name -> COMPETITION_NAME DOSPUNTOS STRING . COMA
+
+    COMA            shift and go to state 42
+
+
+state 37
+
+    (8) country -> COUNTRY DOSPUNTOS STRING COMA .
+
+    COMPETITION_NAME reduce using rule 8 (country -> COUNTRY DOSPUNTOS STRING COMA .)
+
+
+state 38
+
+    (5) estructura -> competition_id season_id country competition_name gender youth international . season_name match
+    (13) season_name -> . SEASON_NAME DOSPUNTOS STRING COMA
+
+    SEASON_NAME     shift and go to state 44
+
+    season_name                    shift and go to state 43
+
+state 39
+
+    (12) international -> INTERNATIONAL . DOSPUNTOS BOOLEAN COMA
+
+    DOSPUNTOS       shift and go to state 45
+
+
+state 40
+
+    (11) youth -> YOUTH DOSPUNTOS . BOOLEAN COMA
+
+    BOOLEAN         shift and go to state 46
+
+
+state 41
+
+    (10) gender -> GENDER DOSPUNTOS STRING . COMA
+
+    COMA            shift and go to state 47
+
+
+state 42
+
+    (9) competition_name -> COMPETITION_NAME DOSPUNTOS STRING COMA .
+
+    GENDER          reduce using rule 9 (competition_name -> COMPETITION_NAME DOSPUNTOS STRING COMA .)
+
+
+state 43
+
+    (5) estructura -> competition_id season_id country competition_name gender youth international season_name . match
+    (14) match -> . MATCH DOSPUNTOS LLAVE_ABRE estructura_match LLAVE_CIERRA
+
+    MATCH           shift and go to state 49
+
+    match                          shift and go to state 48
+
+state 44
+
+    (13) season_name -> SEASON_NAME . DOSPUNTOS STRING COMA
+
+    DOSPUNTOS       shift and go to state 50
+
+
+state 45
+
+    (12) international -> INTERNATIONAL DOSPUNTOS . BOOLEAN COMA
+
+    BOOLEAN         shift and go to state 51
+
+
+state 46
+
+    (11) youth -> YOUTH DOSPUNTOS BOOLEAN . COMA
+
+    COMA            shift and go to state 52
+
+
+state 47
+
+    (10) gender -> GENDER DOSPUNTOS STRING COMA .
+
+    YOUTH           reduce using rule 10 (gender -> GENDER DOSPUNTOS STRING COMA .)
+
+
+state 48
+
+    (5) estructura -> competition_id season_id country competition_name gender youth international season_name match .
+
+    LLAVE_CIERRA    reduce using rule 5 (estructura -> competition_id season_id country competition_name gender youth international season_name match .)
+
+
+state 49
+
+    (14) match -> MATCH . DOSPUNTOS LLAVE_ABRE estructura_match LLAVE_CIERRA
+
+    DOSPUNTOS       shift and go to state 53
+
+
+state 50
+
+    (13) season_name -> SEASON_NAME DOSPUNTOS . STRING COMA
+
+    STRING          shift and go to state 54
+
+
+state 51
+
+    (12) international -> INTERNATIONAL DOSPUNTOS BOOLEAN . COMA
+
+    COMA            shift and go to state 55
+
+
+state 52
+
+    (11) youth -> YOUTH DOSPUNTOS BOOLEAN COMA .
+
+    INTERNATIONAL   reduce using rule 11 (youth -> YOUTH DOSPUNTOS BOOLEAN COMA .)
+
+
+state 53
+
+    (14) match -> MATCH DOSPUNTOS . LLAVE_ABRE estructura_match LLAVE_CIERRA
+
+    LLAVE_ABRE      shift and go to state 56
+
+
+state 54
+
+    (13) season_name -> SEASON_NAME DOSPUNTOS STRING . COMA
+
+    COMA            shift and go to state 57
+
+
+state 55
+
+    (12) international -> INTERNATIONAL DOSPUNTOS BOOLEAN COMA .
+
+    SEASON_NAME     reduce using rule 12 (international -> INTERNATIONAL DOSPUNTOS BOOLEAN COMA .)
+
+
+state 56
+
+    (14) match -> MATCH DOSPUNTOS LLAVE_ABRE . estructura_match LLAVE_CIERRA
+    (15) estructura_match -> . updated updated360 available360 available
+    (16) updated -> . UPDATED DOSPUNTOS TIMESTAMP COMA
+    (17) updated -> . UPDATED DOSPUNTOS NULL COMA
+
+    UPDATED         shift and go to state 60
+
+    estructura_match               shift and go to state 58
+    updated                        shift and go to state 59
+
+state 57
+
+    (13) season_name -> SEASON_NAME DOSPUNTOS STRING COMA .
+
+    MATCH           reduce using rule 13 (season_name -> SEASON_NAME DOSPUNTOS STRING COMA .)
+
+
+state 58
+
+    (14) match -> MATCH DOSPUNTOS LLAVE_ABRE estructura_match . LLAVE_CIERRA
+
+    LLAVE_CIERRA    shift and go to state 61
+
+
+state 59
+
+    (15) estructura_match -> updated . updated360 available360 available
+    (18) updated360 -> . UPDATED_360 DOSPUNTOS TIMESTAMP COMA
+    (19) updated360 -> . UPDATED_360 DOSPUNTOS NULL COMA
+
+    UPDATED_360     shift and go to state 63
+
+    updated360                     shift and go to state 62
+
+state 60
+
+    (16) updated -> UPDATED . DOSPUNTOS TIMESTAMP COMA
+    (17) updated -> UPDATED . DOSPUNTOS NULL COMA
+
+    DOSPUNTOS       shift and go to state 64
+
+
+state 61
+
+    (14) match -> MATCH DOSPUNTOS LLAVE_ABRE estructura_match LLAVE_CIERRA .
+
+    LLAVE_CIERRA    reduce using rule 14 (match -> MATCH DOSPUNTOS LLAVE_ABRE estructura_match LLAVE_CIERRA .)
+
+
+state 62
+
+    (15) estructura_match -> updated updated360 . available360 available
+    (20) available360 -> . AVAILABLE_360 DOSPUNTOS TIMESTAMP COMA
+    (21) available360 -> . AVAILABLE_360 DOSPUNTOS NULL COMA
+
+    AVAILABLE_360   shift and go to state 66
+
+    available360                   shift and go to state 65
+
+state 63
+
+    (18) updated360 -> UPDATED_360 . DOSPUNTOS TIMESTAMP COMA
+    (19) updated360 -> UPDATED_360 . DOSPUNTOS NULL COMA
+
+    DOSPUNTOS       shift and go to state 67
+
+
+state 64
+
+    (16) updated -> UPDATED DOSPUNTOS . TIMESTAMP COMA
+    (17) updated -> UPDATED DOSPUNTOS . NULL COMA
+
+    TIMESTAMP       shift and go to state 68
+    NULL            shift and go to state 69
+
+
+state 65
+
+    (15) estructura_match -> updated updated360 available360 . available
+    (22) available -> . AVAILABLE DOSPUNTOS TIMESTAMP
+    (23) available -> . AVAILABLE DOSPUNTOS NULL
+
+    AVAILABLE       shift and go to state 71
+
+    available                      shift and go to state 70
+
+state 66
+
+    (20) available360 -> AVAILABLE_360 . DOSPUNTOS TIMESTAMP COMA
+    (21) available360 -> AVAILABLE_360 . DOSPUNTOS NULL COMA
+
+    DOSPUNTOS       shift and go to state 72
+
+
+state 67
+
+    (18) updated360 -> UPDATED_360 DOSPUNTOS . TIMESTAMP COMA
+    (19) updated360 -> UPDATED_360 DOSPUNTOS . NULL COMA
+
+    TIMESTAMP       shift and go to state 73
+    NULL            shift and go to state 74
+
+
+state 68
+
+    (16) updated -> UPDATED DOSPUNTOS TIMESTAMP . COMA
+
+    COMA            shift and go to state 75
+
+
+state 69
+
+    (17) updated -> UPDATED DOSPUNTOS NULL . COMA
+
+    COMA            shift and go to state 76
+
+
+state 70
+
+    (15) estructura_match -> updated updated360 available360 available .
+
+    LLAVE_CIERRA    reduce using rule 15 (estructura_match -> updated updated360 available360 available .)
+
+
+state 71
+
+    (22) available -> AVAILABLE . DOSPUNTOS TIMESTAMP
+    (23) available -> AVAILABLE . DOSPUNTOS NULL
+
+    DOSPUNTOS       shift and go to state 77
+
+
+state 72
+
+    (20) available360 -> AVAILABLE_360 DOSPUNTOS . TIMESTAMP COMA
+    (21) available360 -> AVAILABLE_360 DOSPUNTOS . NULL COMA
+
+    TIMESTAMP       shift and go to state 78
+    NULL            shift and go to state 79
+
+
+state 73
+
+    (18) updated360 -> UPDATED_360 DOSPUNTOS TIMESTAMP . COMA
+
+    COMA            shift and go to state 80
+
+
+state 74
+
+    (19) updated360 -> UPDATED_360 DOSPUNTOS NULL . COMA
+
+    COMA            shift and go to state 81
+
+
+state 75
+
+    (16) updated -> UPDATED DOSPUNTOS TIMESTAMP COMA .
+
+    UPDATED_360     reduce using rule 16 (updated -> UPDATED DOSPUNTOS TIMESTAMP COMA .)
+
+
+state 76
+
+    (17) updated -> UPDATED DOSPUNTOS NULL COMA .
+
+    UPDATED_360     reduce using rule 17 (updated -> UPDATED DOSPUNTOS NULL COMA .)
+
+
+state 77
+
+    (22) available -> AVAILABLE DOSPUNTOS . TIMESTAMP
+    (23) available -> AVAILABLE DOSPUNTOS . NULL
+
+    TIMESTAMP       shift and go to state 82
+    NULL            shift and go to state 83
+
+
+state 78
+
+    (20) available360 -> AVAILABLE_360 DOSPUNTOS TIMESTAMP . COMA
+
+    COMA            shift and go to state 84
+
+
+state 79
+
+    (21) available360 -> AVAILABLE_360 DOSPUNTOS NULL . COMA
+
+    COMA            shift and go to state 85
+
+
+state 80
+
+    (18) updated360 -> UPDATED_360 DOSPUNTOS TIMESTAMP COMA .
+
+    AVAILABLE_360   reduce using rule 18 (updated360 -> UPDATED_360 DOSPUNTOS TIMESTAMP COMA .)
+
+
+state 81
+
+    (19) updated360 -> UPDATED_360 DOSPUNTOS NULL COMA .
+
+    AVAILABLE_360   reduce using rule 19 (updated360 -> UPDATED_360 DOSPUNTOS NULL COMA .)
+
+
+state 82
+
+    (22) available -> AVAILABLE DOSPUNTOS TIMESTAMP .
+
+    LLAVE_CIERRA    reduce using rule 22 (available -> AVAILABLE DOSPUNTOS TIMESTAMP .)
+
+
+state 83
+
+    (23) available -> AVAILABLE DOSPUNTOS NULL .
+
+    LLAVE_CIERRA    reduce using rule 23 (available -> AVAILABLE DOSPUNTOS NULL .)
+
+
+state 84
+
+    (20) available360 -> AVAILABLE_360 DOSPUNTOS TIMESTAMP COMA .
+
+    AVAILABLE       reduce using rule 20 (available360 -> AVAILABLE_360 DOSPUNTOS TIMESTAMP COMA .)
+
+
+state 85
+
+    (21) available360 -> AVAILABLE_360 DOSPUNTOS NULL COMA .
+
+    AVAILABLE       reduce using rule 21 (available360 -> AVAILABLE_360 DOSPUNTOS NULL COMA .)
+

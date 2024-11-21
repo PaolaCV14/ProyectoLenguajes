@@ -36,33 +36,109 @@ t_COMA = r','
 t_COR_ABRE = r'\['
 t_COR_CIERRA = r'\]'
 
-#Valores
-t_STRING = r'\".*?\"'
-#t_NUMBER = r'\d+'
-t_BOOLEAN = r'(true|false)'
-t_NULL = r'NULL|null'
 
 #Campos
-t_ROOT = r'\"root\"'
-t_COMPETITION_ID = r'\"competition_id\"'
-t_SEASON_ID = r'\"season_id\"'
-t_COUNTRY = r'\"country_name\"'
-t_COMPETITION_NAME = r'\"competition_name\"'
-t_GENDER = r'\"competition_gender\"'
-t_YOUTH = r'\"competition_youth\"'
-t_INTERNATIONAL = r'\"competition_international\"'
-t_SEASON_NAME = r'\"season_name\"'
-t_MATCH = r'\"match\"'
-t_UPDATED = r'\"updated\"'
-t_UPDATED_360 = r'\"updated_360\"'
-t_AVAILABLE_360 = r'\"available_360\"'
-t_AVAILABLE = r'\"available\"'
-t_TIMESTAMP = r'\"[0-9]{4}\-[0-9]{2}\-[0-9]{2}T[0-9]{2}\:[0-9]{2}:[0-9]{2}\.[0-9]*'
-
-def t_NUMBER(t):
-    r'[1-9][0-9]*'  
-    t.value = int(t.value)
+# Campos
+def t_ROOT(t):
+    r'"root"'
+    t.type = 'ROOT'
     return t
+
+def t_COMPETITION_ID(t):
+    r'"competition_id"'
+    t.type = 'COMPETITION_ID'
+    return t
+
+def t_SEASON_ID(t):
+    r'"season_id"'
+    t.type = 'SEASON_ID'
+    return t
+
+def t_COUNTRY(t):
+    r'"country_name"'
+    t.type = 'COUNTRY'
+    return t
+
+def t_COMPETITION_NAME(t):
+    r'"competition_name"'
+    t.type = 'COMPETITION_NAME'
+    return t
+
+def t_GENDER(t):
+    r'"competition_gender"'
+    t.type = 'GENDER'
+    return t
+
+def t_YOUTH(t):
+    r'"competition_youth"'
+    t.type = 'YOUTH'
+    return t
+
+def t_INTERNATIONAL(t):
+    r'"competition_international"'
+    t.type = 'INTERNATIONAL'
+    return t
+
+def t_SEASON_NAME(t):
+    r'"season_name"'
+    t.type = 'SEASON_NAME'
+    return t
+
+def t_MATCH(t):
+    r'"match"'
+    t.type = 'MATCH'
+    return t
+
+def t_UPDATED(t):
+    r'"updated"'
+    t.type = 'UPDATED'
+    return t
+
+def t_UPDATED_360(t):
+    r'"updated_360"'
+    t.type = 'UPDATED_360'
+    return t
+
+def t_AVAILABLE_360(t):
+    r'"available_360"'
+    t.type = 'AVAILABLE_360'
+    return t
+
+def t_AVAILABLE(t):
+    r'"available"'
+    t.type = 'AVAILABLE'
+    return t
+
+def t_TIMESTAMP(t):
+    r'"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]*"'
+    t.type = 'TIMESTAMP'
+    return t
+
+# Valores
+def t_STRING(t):
+    r'"(\\.|[^"\\])*"'
+    t.type = 'STRING'
+    return t
+
+def t_BOOLEAN(t):
+    r'true|false'
+    t.type = 'BOOLEAN'
+    return t
+
+def t_NULL(t):
+    r'null|NULL'
+    t.type = 'NULL'
+    return t
+
+# Números
+def t_NUMBER(t):
+    r'[1-9][0-9]*'
+    t.value = int(t.value)
+    t.type = 'NUMBER'
+    return t
+
+
+
 
 t_ignore = ' '
 
