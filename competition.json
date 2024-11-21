@@ -1,0 +1,86 @@
+{
+    "root": [
+      {
+        "competition_id": 9,
+        "season_id": 281,
+        "country_name": "Germany",
+        "competition_name": "1. Bundesliga",
+        "competition_gender": "male",
+        "competition_youth": false,
+        "competition_international": false,
+        "season_name": "2023/2024",
+        "match": {
+          "updated": "2024-07-15T14:15:54.671676",
+          "updated_360": "2024-07-15T14:17:00.877356",
+          "available_360": "2024-07-15T14:17:00.877356",
+          "available": "2024-07-15T14:15:54.671676"
+        }
+      },
+      {
+        "competition_id": 9,
+        "season_id": 282,
+        "country_name": "Germany",
+        "competition_name": "1. Bundesliga",
+        "competition_gender": "male",
+        "competition_youth": false,
+        "competition_international": false,
+        "season_name": "2015/2016",
+        "match": {
+          "updated": "2024-05-19T11:11:14.192381",
+          "updated_360": null,
+          "available_360": null,
+          "available": "2024-05-19T11:11:14.192381"
+        }
+      },
+      {
+        "competition_id": 1267,
+        "season_id": 107,
+        "country_name": "Africa",
+        "competition_name": "African Cup of Nations",
+        "competition_gender": "male",
+        "competition_youth": false,
+        "competition_international": true,
+        "season_name": "2023",
+        "match": {
+          "updated": "2024-06-13T07:51:02.452825",
+          "updated_360": null,
+          "available_360": null,
+          "available": "2024-06-13T07:51:02.452825"
+        }
+      },
+      {
+        "competition_id": 16,
+        "season_id": 108,
+        "country_name": "Europe",
+        "competition_name": "Champions League",
+        "competition_gender": "male",
+        "competition_youth": false,
+        "competition_international": false,
+        "season_name": "2018/2019",
+        "match": {
+          "updated": "2024-06-12T07:44:38.559714",
+          "updated_360": "2021-06-13T16:17:31.694",
+          "available_360": null,
+          "available": "2024-06-12T07:44:38.559714"
+        }
+      },
+      {
+        "competition_id": 16,
+        "season_id": 109,
+        "country_name": "Europe",
+        "competition_name": "Champions League",
+        "competition_gender": "male",
+        "competition_youth": false,
+        "competition_international": false,
+        "season_name": "2017/2018",
+        "match": {
+          "updated": "2024-02-13T02:35:28.134882",
+          "updated_360": "2021-06-13T16:17:31.694",
+          "available_360": null,
+          "available": "2024-02-13T02:35:28.134882"
+        }
+      }
+    ]
+  }
+  
+  
