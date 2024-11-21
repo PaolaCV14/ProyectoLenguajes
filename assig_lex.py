@@ -24,7 +24,8 @@ tokens = (
     'UPDATED',
     'UPDATED_360',
     'AVAILABLE_360',
-    'AVAILABLE'
+    'AVAILABLE',
+    'TIMESTAMP'
 )
 
 #Delimitadores
@@ -56,6 +57,7 @@ t_UPDATED = r'\"updated\"'
 t_UPDATED_360 = r'\"updated_360\"'
 t_AVAILABLE_360 = r'\"available_360\"'
 t_AVAILABLE = r'\"available\"'
+t_TIMESTAMP = r'\"[0-9]{4}\-[0-9]{2}\-[0-9]{2}T[0-9]{2}\:[0-9]{2}:[0-9]{2}\.[0-9]*'
 
 def t_NUMBER(t):
     r'[1-9][0-9]*'  
