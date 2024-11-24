@@ -1,0 +1,29 @@
+INSERT INTO competitions (
+    competition_id, 
+    season_id, 
+    country_name, 
+    competition_name, 
+    competition_gender, 
+    competition_youth, 
+    competition_international, 
+    season_name
+) VALUES
+(9, 281, "Germany", "1. Bundesliga", "male", false, false, "2023/2024"),
+(9, 282, "Germany", "1. Bundesliga", "male", false, false, "2015/2016"),
+(1267, 107, "Africa", "African Cup of Nations", "male", false, true, "2023"),
+(16, 108, "Europe", "Champions League", "male", false, false, "2018/2019"),
+(16, 109, "Europe", "Champions League", "male", false, false, "2017/2018"),;
+
+INSERT INTO matches (
+    competition_id, 
+    season_id, 
+    updated, 
+    updated_360, 
+    available_360, 
+    available
+) VALUES
+(9, '"2024-07-15T14:15:54.671676"', '"2024-07-15T14:17:00.877356"', '"2024-07-15T14:17:00.877356"', '"2024-07-15T14:15:54.671676"'),
+(9, '"2024-05-19T11:11:14.192381"', NULL, NULL, '"2024-05-19T11:11:14.192381"'),
+(1267, '"2024-06-13T07:51:02.452825"', NULL, NULL, '"2024-06-13T07:51:02.452825"'),
+(16, '"2024-06-12T07:44:38.559714"', '"2021-06-13T16:17:31.694"', NULL, '"2024-06-12T07:44:38.559714"'),
+(16, '"2024-02-13T02:35:28.134882"', '"2021-06-13T16:17:31.694"', NULL, '"2024-02-13T02:35:28.134882"'),;

@@ -29,10 +29,10 @@ tokens = (
 )
 
 #Delimitadores
-t_LLAVE_ABRE = r'{'
-t_LLAVE_CIERRA = r'}'
-t_DOSPUNTOS = r':'
-t_COMA = r','
+t_LLAVE_ABRE = r'\{'
+t_LLAVE_CIERRA = r'\}'
+t_DOSPUNTOS = r'\:'
+t_COMA = r'\,'
 t_COR_ABRE = r'\['
 t_COR_CIERRA = r'\]'
 
