@@ -1,4 +1,6 @@
 import ply.yacc as yacc
+import pandas as pd
+import json  # To handle JSON formatting
 from assig_lex import tokens
 
 data_dict = {
@@ -141,7 +143,9 @@ def p_error(p):
         print("Syntax error at EOF")
 
 def insert_sql():
-    with open("sql_insert_instructions.txt", "w") as f:
+    # Abrir archivo en formato .sql y que se pueda escribir en este
+    with open("sql_insert.sql", "w") as f:
+        # Instrucciones para hacer el insert a competitions
         f.write("INSERT INTO competitions (\n")
         f.write("    competition_id, \n")
         f.write("    season_id, \n")
@@ -164,12 +168,14 @@ def insert_sql():
                 str(data_dict['INTERNATIONAL'][i]),
                 str(data_dict['SEASON_NAME'][i])
             )
-            f.write(f"({', '.join(competition_values)}),\n")
+            # Que el último no tenga coma
+            if i == len(data_dict['COMPETITION_ID']) - 1:
+                f.write(f"({', '.join(competition_values)});\n")  
+            else:
+                f.write(f"({', '.join(competition_values)}),\n")
 
-        f.seek(f.tell() - 2, 0)
-        f.write(";\n\n")
-        
-        f.write("INSERT INTO matches (\n")
+        # Instrucciones para hacer el insert a match
+        f.write("\nINSERT INTO match (\n")
         f.write("    competition_id, \n")
         f.write("    season_id, \n")
         f.write("    updated, \n")
@@ -181,38 +187,70 @@ def insert_sql():
         for i in range(len(data_dict['COMPETITION_ID'])):
             match_values = (
                 str(data_dict['COMPETITION_ID'][i]),
-                f"'{data_dict['UPDATED'][i]}'" if data_dict['UPDATED'][i] != None else 'NULL',
-                f"'{data_dict['UPDATED_360'][i]}'" if data_dict['UPDATED_360'][i] != None else 'NULL',
-                f"'{data_dict['AVAILABLE_360'][i]}'" if data_dict['AVAILABLE_360'][i] != None else 'NULL',
-                f"'{data_dict['AVAILABLE'][i]}'" if data_dict['AVAILABLE'][i] != None else 'NULL'
+                f"'{data_dict['UPDATED'][i]}'" if data_dict['UPDATED'][i] is not None else 'NULL',
+                f"'{data_dict['UPDATED_360'][i]}'" if data_dict['UPDATED_360'][i] is not None else 'NULL',
+                f"'{data_dict['AVAILABLE_360'][i]}'" if data_dict['AVAILABLE_360'][i] is not None else 'NULL',
+                f"'{data_dict['AVAILABLE'][i]}'" if data_dict['AVAILABLE'][i] is not None else 'NULL'
             )
-            f.write(f"({', '.join(match_values)}),\n")
+            # Que el último no tenga coma
+            if i == len(data_dict['COMPETITION_ID']) - 1:
+                f.write(f"({', '.join(match_values)});\n")  
+            else:
+                f.write(f"({', '.join(match_values)}),\n")
 
-        f.seek(f.tell() - 2, 0)
-        f.write(";\n")
+    print("Las instrucciones SQL han sido escritas correctamente")
 
-    print("Las instrucciones SQL han sido escritas en 'sql_insert_instructions.txt'")
+
 
 parser = yacc.yacc()
 
-
+#Validación dando ruta de archivo
 while True: 
     try: 
         s = input('Validate expression: > ')
+        
+        try:
+            with open(s, 'r') as f:
+                data = json.load(f)
+                # Para que quede el formato original y no lo cambie a cosas diferentes
+                d = json.dumps(data, indent=2, separators=(',', ': '), default=str).replace('\'', '"')
+        except FileNotFoundError:
+            print(f"Error: The file '{s}' was not found.")
+            continue  
     except EOFError:
         break
-    if not s: 
-        continue
-    print(f"Input: {s}")
+    if not d: 
+        continue    
     try:
-        result = parser.parse(s)
+        result = parser.parse(d)
         if result:
             print("Resultado:", result)
             print("Validación correcta.")
-            print(data_dict['COMPETITION_ID'][0])
             insert_sql()
-
         else:
             print("Validación fallida.")
     except Exception as e:
         print(f"Error al analizar: {e}")
+
+#Validación dando el texto desde cmd
+# while True: 
+#     try: 
+#         s = input('Validate expression: > ')
+    
+#     except EOFError:
+#         break
+#     if not s: 
+#         continue
+#     print(f"{s}")
+#     try:
+#         result = parser.parse(s)
+#         if result:
+#             print("Resultado:", result)
+#             print("Validación correcta.")
+#             print(len(data_dict['COMPETITION_ID']))
+#             insert_sql()
+
+#         else:
+#             print("Validación fallida.")
+#     except Exception as e:
+#         print(f"Error al analizar: {e}")
