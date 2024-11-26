@@ -1,0 +1,320 @@
+{
+  "root": [
+    {
+      "competition_id": 9,
+      "season_id": 281,
+      "country_name": "Germany",
+      "competition_name": "1. Bundesliga",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2023/2024",
+      "match": {
+        "updated": "2024-07-15T14:15:54.671676",
+        "updated_360": "2024-07-15T14:17:00.877356",
+        "available_360": "2024-07-15T14:17:00.877356",
+        "available": "2024-07-15T14:15:54.671676"
+      }
+    },
+    {
+      "competition_id": 9,
+      "season_id": 27,
+      "country_name": "Germany",
+      "competition_name": "1. Bundesliga",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2015/2016",
+      "match": {
+        "updated": "2024-05-19T11:11:14.192381",
+        "updated_360": null,
+        "available_360": null,
+        "available": "2024-05-19T11:11:14.192381"
+      }
+    },
+    {
+      "competition_id": 1267,
+      "season_id": 107,
+      "country_name": "Africa",
+      "competition_name": "African Cup of Nations",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": true,
+      "season_name": "2023",
+      "match": {
+        "updated": "2024-06-13T07:51:02.452825",
+        "updated_360": null,
+        "available_360": null,
+        "available": "2024-06-13T07:51:02.452825"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 4,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2018/2019",
+      "match": {
+        "updated": "2024-06-12T07:44:38.559714",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-06-12T07:44:38.559714"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 1,
+      "country_name": "South America",
+      "competition_name": "Copa America",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2017/2018",
+      "match": {
+        "updated": "2024-02-13T02:35:28.134882",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-13T02:35:28.134882"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 2,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2016/2017",
+      "match": {
+        "updated": "2024-02-13T02:37:32.205154",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-13T02:37:32.205154"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 27,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2015/2016",
+      "match": {
+        "updated": "2024-06-12T07:45:38.786894",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-06-12T07:45:38.786894"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 26,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2014/2015",
+      "match": {
+        "updated": "2024-02-12T12:49:54.914228",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T12:49:54.914228"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 25,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2013/2014",
+      "match": {
+        "updated": "2024-02-12T12:48:48.479157",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T12:48:48.479157"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 24,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2012/2013",
+      "match": {
+        "updated": "2024-02-12T12:47:34.340413",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T12:47:34.340413"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 23,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2011/2012",
+      "match": {
+        "updated": "2024-02-13T02:36:35.69834",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-13T02:36:35.69834"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 22,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2010/2011",
+      "match": {
+        "updated": "2024-02-12T12:53:03.94432",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T12:53:03.94432"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 21,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2009/2010",
+      "match": {
+        "updated": "2024-02-12T12:49:25.017694",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T12:49:25.017694"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 41,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2008/2009",
+      "match": {
+        "updated": "2024-02-13T07:02:54.657056",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-13T07:02:54.657056"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 39,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2006/2007",
+      "match": {
+        "updated": "2024-02-12T13:48:23.967222",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T13:48:23.967222"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 37,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2004/2005",
+      "match": {
+        "updated": "2024-02-12T13:09:19.665986",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T13:09:19.665986"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 44,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2003/2004",
+      "match": {
+        "updated": "2024-02-12T13:51:22.36638",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2024-02-12T13:51:22.36638"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 76,
+      "country_name": "Europe",
+      "competition_name": "Champions League",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "1999/2000",
+      "match": {
+        "updated": "2020-07-29T13:51:22.36638",
+        "updated_360": "2021-06-13T16:17:31.694",
+        "available_360": null,
+        "available": "2020-07-29T13:51:22.36638"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 277,
+      "country_name": "England",
+      "competition_name": "FA Womens Super League",
+      "competition_gender": "female",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "2020/2021",
+      "match": {
+        "updated": "2024-02-13T14:25:16.532771",
+        "updated_360": null,
+        "available_360": null,
+        "available": "2024-02-13T14:25:16.532771"
+      }
+    },
+    {
+      "competition_id": 16,
+      "season_id": 71,
+      "country_name": "Spain",
+      "competition_name": "Copa del Rey",
+      "competition_gender": "male",
+      "competition_youth": false,
+      "competition_international": false,
+      "season_name": "1971/1972"
+    }
+  ]
+}
+  
+  
