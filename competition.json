@@ -282,17 +282,17 @@
       "competition_international": false,
       "season_name": "1999/2000",
       "match": {
-        "updated": "2020-07-29T05:00",
+        "updated": "2020-07-29T13:51:22.36638",
         "updated_360": "2021-06-13T16:17:31.694",
         "available_360": null,
-        "available": "2020-07-29T05:00"
+        "available": "2020-07-29T13:51:22.36638"
       }
     },
     {
       "competition_id": 16,
       "season_id": 277,
       "country_name": "England",
-      "competition_name": "FA Women's Super League",
+      "competition_name": "FA Womens Super League",
       "competition_gender": "female",
       "competition_youth": false,
       "competition_international": false,
