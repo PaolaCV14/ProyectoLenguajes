@@ -139,8 +139,8 @@ def t_NUMBER(t):
 
 
 
+t_ignore = ' \n'
 
-t_ignore = ' '
 
 
 def t_error(t):
@@ -149,3 +149,6 @@ def t_error(t):
 
 
 lexer = lex.lex()
+
+
+
